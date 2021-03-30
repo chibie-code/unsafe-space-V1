@@ -1,26 +1,31 @@
 // import logo from './logo.svg';
+
 import './App.css';
-import { Container, Header, Content, Footer, Sidebar, Button, Icon, Input, InputGroup } from 'rsuite';
+import { Container, Header, Content, Footer, Sidebar, Button, Icon, Input, InputGroup, Navbar, Nav, Dropdown, FlexboxGrid } from 'rsuite';
 import 'rsuite/dist/styles/rsuite-default.css';
 
 function App() {
   const styles = {
     appContainer: {
       width: '100%',
-      border: 'solid 1px darkred'
     },
     mainContainer: {
       height: '100vh',
       overflow: 'hidden'
     },
     header: {
-      border: 'solid 1px lime',
       marginBottom: 'auto',
       width: '100%',
-      textAlign: 'center'
+      textAlign: 'center',
+      backgroundColor: 'var(--oc-grape-2)'
+    },
+    userLogoutButton: {
+      padding: '0 1rem'
     },
     mainContent: {
       overflowY: 'auto'
+    },
+    messageArea: {
     },
     footer: {
       marginTop: 'auto',
@@ -36,22 +41,34 @@ function App() {
     },
     sidebar: {
       height: '100vh',
-      border: 'solid 1px',
-      display: 'none'
+      backgroundColor: 'var(--oc-grape-2)'
     }
   }
   return (
     <Container className="" style={styles.appContainer}>
 
-      <Sidebar style={styles.sidebar}></Sidebar>
+      <Sidebar style={styles.sidebar}>
+        Live Anonymous Users
+      </Sidebar>
 
       <Container style={styles.mainContainer}>
       <Header style={styles.header}>
-      <Button>Message Input Section</Button>  
-        Header
+        <Navbar style={styles.userLogoutButton}>
+          <Navbar.Header>
+            LOGO
+          </Navbar.Header>
+          <Navbar.Body>
+          <Nav pullRight>
+            <Dropdown title="User">
+              <Dropdown.Item eventKey="1" icon={<Icon icon="cog"/>}>Settings</Dropdown.Item>
+              <Dropdown.Item eventKey="2">Logout</Dropdown.Item>
+            </Dropdown>
+          </Nav>
+          </Navbar.Body>
+        </Navbar>
       </Header>
       
-      <Content style={styles.mainContent}>
+      <Content class="message-area" style={styles.messageArea}>
         Content
 
         

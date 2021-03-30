@@ -1,3 +1,5 @@
+@import 'open-color/open-color.css';
+
 .App {
   text-align: center;
 }
@@ -36,3 +38,8 @@
     transform: rotate(360deg);
   }
 }
+
+/* .message-area {
+  background-color: var(--oc-grape-7);
+  background-color: '#e599f7';
+} */
