@@ -1,10 +1,7 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Container, Header, Content, Footer, Sidebar, Button, Icon,
-   Input, InputGroup, Navbar, Nav, Dropdown, FlexboxGrid, Grid, Row,
-    Col, Form, FormGroup, ControlLabel, FormControl, HelpBlock,
-     ButtonToolbar, Modal, Alert } from 'rsuite';
-import Login from './index/LoginModal';
+// import { Link } from "react-router-dom";
+import { Container, Header, Content, Button, FlexboxGrid, Alert } from 'rsuite';
+import Login from './LoginModal';
 import 'rsuite/dist/styles/rsuite-default.css';
 
 //Main Page Component 
@@ -47,14 +44,14 @@ const MainPage = () => {
   const signUp = () =>{
     Alert.success('Welcome to the Unsafe Space')
   }
-  const testin = () => alert("Testing...");
+  // const testin = () => alert("Testing...");
   return (
       <Container style={styles.mainContainer}>
         <Header style={styles.header}>
         </Header>
-        <Content class="content" style={styles.content}>
+        <Content className="content" style={styles.content}>
           <FlexboxGrid justify="center" align="middle" style={styles.gridContainer}>
-            <FlexboxGrid.Item colspan={6} style={styles.joinBtn}>
+            <FlexboxGrid.Item style={styles.joinBtn}>
             <Login showModal={showModal} closeModal={closeModal} signUp={signUp} />
               <div style={{ textAlign: 'center' }}>
                 <Button appearance='primary' onClick={openModal} block>Join The Unsafe Space</Button>

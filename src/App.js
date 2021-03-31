@@ -9,12 +9,13 @@ import {
 } from "react-router-dom";
 import 'open-color/open-color.css';
 //Pages
-import MainPage from "./src/pages"; ///< index.jsx will be automatically imported 
+import MainPage from "./pages/main-page/index"; ///< index.jsx will be automatically imported 
 //And render that route with the MainPage component for the root path /
-import Chatroom from './src/pages/chatroom';
-import NotFoundPage from "./src/pages/404";
+import Chatroom from './pages/chatroom/index';
+import NotFoundPage from "./pages/404/index";
 
-function App() {
+
+function App({ dispatch }) {
   return (
     <Router>
       <Switch>

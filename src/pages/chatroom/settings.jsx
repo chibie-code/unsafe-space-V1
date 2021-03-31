@@ -1,8 +1,7 @@
 //
-import React, { useState } from 'react';
-import { Container, Header, Toggle,
-     Button, Icon, Navbar, 
-     Nav, Drawer, List } from 'rsuite';
+// import React, { useState } from 'react';
+import { Toggle,
+     Button, Drawer } from 'rsuite';
 
 const Settings = (props) => {
 // 
@@ -22,6 +21,7 @@ const Settings = (props) => {
             justifyContent: 'space-between'
         }
     }
+    
     return (
         <Drawer
             show={props.showSettings} 
@@ -35,10 +35,6 @@ const Settings = (props) => {
                     <div style={styles.settings}>
                         <div style={styles.setting}>
                             <span>Choose Theme</span>
-                            <span><Toggle size="md" /></span>
-                        </div>
-                        <div style={styles.setting}>
-                            <span>Show Users</span>
                             <span><Toggle size="md" /></span>
                         </div>
                         <div style={styles.setting}>
